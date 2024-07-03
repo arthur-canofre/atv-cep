@@ -23,3 +23,45 @@ body{
     gap: 10px;
 }
 
+.container-dogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-dogs section{
+    background-color: rgb(195, 165, 128);
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.container-dogs img{
+    object-fit: cover;
+    width: 470px;
+    height: 570px;
+}
+
+.container-dogs div{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.container-dogs button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(160, 96, 66);
+}
+
+.container-dogs button:hover{
+    background-color: rgb(105, 61, 41);
+}
+
+@media screen and (max-width: 600px){
+    .container-dogs img{
+        height: 400px;
+        width: 300px;
+    };
+}

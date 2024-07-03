@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-export default function Dogdex(){
+export default function PaginaDog(){
 
     const [id, setId] = useState(0)
-    const [dog, setDog] = useState(null)
+    const [dog, setDog] = useState([])
     const [error, setError] = useState(null)
 
     const fetchData = async () => {
@@ -17,7 +17,7 @@ export default function Dogdex(){
           setError(false)
         } catch (error) {
           setError(true)
-          setDog(null);
+          setDog([]);
         }
       };
 
@@ -35,20 +35,19 @@ export default function Dogdex(){
     }, [id])   
 
     return(
-        <section>
-            { error && (
-                <p>morra</p>
-            )}
-            { dog && (
+        <main className="container-dogs">
+            <section>
+                { error && (
+                    <p>algo inesperado aconteceu</p>
+                )}
+                { dog && (
+                    <img src={dog[0].url}></img>
+                )}
                 <div>
-                <h1>{dog.width}</h1>
-                <img src={dog.url}></img>
+                    <button onClick={previousDog}>Anterior</button>
+                    <button onClick={nextDog}>Proximo</button> 
                 </div>
-            )}
-            <div>
-                <button onClick={previousDog}>Anterior</button>
-                <button onClick={nextDog}>Proximo</button>
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }
