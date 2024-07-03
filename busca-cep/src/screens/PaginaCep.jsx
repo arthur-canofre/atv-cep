@@ -2,6 +2,8 @@ import BuscaCep from "../components/BuscaCep";
 
 export default function PaginaCep() {
     return(
-        <BuscaCep/>
+        <main className="container-cep">
+            <BuscaCep/>
+        </main>
     )
 }

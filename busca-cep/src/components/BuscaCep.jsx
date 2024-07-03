@@ -37,9 +37,11 @@ const [address, setAddress] = useState(null);
   }, [cep]);
 
   return (
-    <section className='container-cep'>
-      <input type='number' value={inpText} onChange={handleInputChange} />
-      <button onClick={handleButtonChange}>Buscar</button>
+    <section>
+      <div className='container-pesquisa'>
+        <input type='number' value={inpText} onChange={handleInputChange} />
+        <button onClick={handleButtonChange}>Buscar</button>
+      </div>
       {error && (
         <p>Cep nao encontrado</p>
       )}

@@ -17,7 +17,7 @@ export default function Dogdex(){
           setError(false)
         } catch (error) {
           setError(true)
-          //setDog(null);
+          setDog(null);
         }
       };
 
